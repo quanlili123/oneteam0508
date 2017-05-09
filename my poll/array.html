@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var arr = [1,2,3,4,1,2,3];
+	//第一种
+	function unqone(arr){
+		var  arr1=[];
+     	for (var i = 0; i < arr.length; i++) {
+     		if(arr1.indexOf(arr[i])==-1){
+				arr1.push(arr[i]);
+     		}
+     			
+     	};
+     	return arr1
+	}
+	//console.log(unqone(arr))
+	//第二种
+	function unqtwo(arr){
+		var obj = {},newArr = [];
+		for (var i = 0; i < arr.length; i++) {
+			var value = arr[i];
+			if (!obj[value]) {
+				obj[value] = 1;
+				newArr.push(value);
+			};
+		};
+		return newArr;
+	}
+	console.log(unqtwo(arr))
+	</script>
+</body>
+</html>
