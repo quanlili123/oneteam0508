@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+         span{
+         	 width: 20px;
+         	 height: 20px;
+         	 text-align: center;
+         	 line-height: 20px;
+         	 background: #ccc;
+         	 display: inline-block;
+         	 -webkit-user-select:none;
+         	 user-select:none;
+         }
+         .sum{
+         	 width: 40px;
+         }
+	</style>
+</head>
+<body ng-app="app">
+	<div ng-controller="controller">
+		<span ng-click="add()">+</span>
+	    <span ng-bind="count"ng-class="sum" ></span>
+		<span ng-click="del()">-</span>
+	</div>
+	
+</body>
+<script src="js/angular.min.js"></script>
+<script src="controller/controller.js"></script>
+</html>
